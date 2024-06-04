@@ -152,18 +152,25 @@ app.put('/updateProfile/:userName', (req, res) => {
 app.delete('/deleteProfile/:username', (req, res) => {
     const { username } = req.params;
 
-    const query = 'DELETE FROM Customer WHERE name = ?';
-    db.query(query, [username], (err, results) => {
+    const msgDeleteQuery = 'DELETE FROM Messages WHERE cust_id = (SELECT id FROM Customer WHERE name = ?)';
+    const custDeleteQuery = 'DELETE FROM Customer WHERE name = ?';
+    db.query(msgDeleteQuery, [username, username], (err, results) => {
         if (err) {
             res.status(500).json({ error: 'Database query error' });
             return;
         }
-
-        if (results.affectedRows > 0) {
-            res.json({ message: 'Profile deleted successfully' });
-        } else {
-            res.status(404).json({ error: 'User not found' });
-        }
+        db.query(custDeleteQuery, [username, username], (err, results) => {
+            if (err) {
+                res.status(500).json({ error: 'Database query error' });
+                return;
+            }
+            
+            if (results.affectedRows > 0) {
+                res.json({ message: 'Profile deleted successfully' });
+            } else {
+                res.status(404).json({ error: 'User not found' });
+            }
+        });
     });
 });
 
