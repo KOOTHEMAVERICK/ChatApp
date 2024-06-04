@@ -1,0 +1,131 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.top-bar h2{
+    font-size: 34px;
+    font-weight: lighter;
+    color: #333;
+}
+
+.user-controls {
+    display: flex;
+}
+
+.user-controls .chat-button,
+.user-controls .logout-button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.chat-button:hover{
+    background-color: #d3d3d3;
+}
+
+.user-info {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: calc(50vh - 280px); /* Center vertically */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Set minimum height */
+    justify-content: center; /* Align items to the bottom */
+    text-align: left;
+    /*align-items: center;*/
+}
+
+.user-info .second-group {
+    margin-top: 20px;
+    font-weight: bold;
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.user-info p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 40px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+/* Styling for input fields */
+.user-info input[type="text"],
+.user-info input[type="email"],
+.user-info input[type="password"],
+.user-info input[type="tel"] {
+    display: flex;
+    width: 80%; /* Adjust the width accordingly */
+    margin: 0 auto; /* Set margins to auto for horizontal centering */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.user-info label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+/* Styling for buttons */
+.modify-control {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.save-button,
+.edit-button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.chat-button:hover,
+.logout-button:hover,
+.save-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #d3d3d3;
+}

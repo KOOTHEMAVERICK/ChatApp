@@ -1,0 +1,86 @@
+.register-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: calc(50vh - 280px); /* Center vertically */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* Set minimum height */
+    justify-content: flex-end; /* Align items to the bottom */
+}
+
+.register-container h2 {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.register-container .form-group {
+    margin-bottom: 15px;
+}
+
+.register-container label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.register-container input[type="id"],
+.register-container input[type="name"],
+.register-container input[type="email"],
+.register-container input[type="password"],
+.register-container input[type="phoneNumber"] {
+    display: flex;
+    width: 92%; /* Adjust the width accordingly */
+    margin: 0 auto; /* Set margins to auto for horizontal centering */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.register-container .button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between; /* Separate login and register buttons horizontally */
+}
+
+.register-container .button {
+    width: calc(50% - 5px);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}
+
+.register-container .button:hover {
+    background-color: #d3d3d3;
+}
+
+.register-container .success-popup {
+    text-align: center;
+}
+
+.register-container .confirm-button {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: calc(80%);
+    margin: 0 auto; /* Set margins to auto for horizontal centering */
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}
+
+.register-container .confirm-button:hover {
+    background-color: #d3d3d3;
+}

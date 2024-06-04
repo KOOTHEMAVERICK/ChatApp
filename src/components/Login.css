@@ -1,0 +1,88 @@
+.login-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: calc(50vh - 250px); /* Center vertically */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; /* 최소 높이 설정 */
+    justify-content: flex-end; /* Align items to the bottom */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 120px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    display: flex;
+    width: 92%; /* Adjust the width accordingly */
+    margin: 0 auto; /* Set margins to auto for horizontal centering */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.error-message {
+    text-align: center;
+    color: red;
+    margin-top: 5px;
+}
+
+.login-button-container {
+    display: flex;
+    justify-content: space-between; /* 로그인 버튼과 회원가입 버튼을 가로로 분할하여 나타냄 */
+}
+
+.login-button {
+    width: calc(50% - 5px);
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #d3d3d3;
+}
+
+.success-popup {
+    text-align: center;
+}
+
+.confirm-button {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: calc(80%);
+    margin: 0 auto; /* Set margins to auto for horizontal centering */
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+}
+
+.confirm-button:hover {
+    background-color: #d3d3d3;
+}
